@@ -43,15 +43,54 @@ v4d:Mesh
   rdfs:seeAlso "obj standard";
   fog:asOBJ "qsdf.obj";
 
+v4d:Image
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "image file";
+  rdfs:label " image";
+  fog:asOBJ "qsdf.obj";
+
 v4d:Guid
   rdf:type owl:DatatypeProperty ;
-  rdfs:comment " the number of faces of a target mesh.";
-  rdfs:label " face count of a mesh.";
+  rdfs:comment "Globally Unique Identifier";
+  rdfs:label " Globally Unique Identifier";
+  rdfs:subPropertyOf v4d:Mesh , v4d:Image , bot:Wall, bot:Building, bot:Site, bot:Element ;
 
 v4d:faceCount
   rdf:type owl:DatatypeProperty ;
   rdf:type owl:FunctionalProperty ;
   rdfs:comment " the number of faces of a target mesh.";
   rdfs:label " face count of a mesh.";
+  rdfs:seeAlso "obj standard";
+  rdfs:subPropertyOf v4d:Mesh ;
+
+v4d:vertecCount
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " the number of vertices of a target mesh.";
+  rdfs:label " vertex count of a mesh.";
+  rdfs:seeAlso "obj standard";
+  rdfs:subPropertyOf v4d:Mesh ;
+
+v4d:centroid
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " the centroid of a target mesh.";
+  rdfs:label " centroid of a mesh.";
+  rdfs:seeAlso "obj standard";
+  rdfs:subPropertyOf v4d:Mesh ;
+
+v4d:Min
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " The minimum X,Y,Z value of a target mesh.";
+  rdfs:label " The minimum X,Y,Z value of a target mesh.";
+  rdfs:seeAlso "obj standard";
+  rdfs:subPropertyOf v4d:Mesh ;
+
+v4d:Max
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " The maximum X,Y,Z value of a target mesh.";
+  rdfs:label " The maximum X,Y,Z value of a target mesh.";
   rdfs:seeAlso "obj standard";
   rdfs:subPropertyOf v4d:Mesh ;
