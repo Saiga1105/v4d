@@ -1,0 +1,38 @@
+{
+  "Building": [
+    {
+      "rdfs:label": "Konzerthaus Berlin",
+	  "GUID":"fd03e0b8-c42a-44d6-85fe-8c8ca483bf66",
+      "inst": "building13",
+      "product:Building": "building13",
+      "Fog:asObj": ":\\Projects\\V4Design\\Data\\PUC4sc1 Gendarmenmarkt\\Mesh\\market1\\building13.obj",
+      "rdf:type": "http://www.productontology.org/id/Building",
+      "bot:Building": "Konzerthaus Berlin",
+      "bot:containsElement": [
+		
+		"fd03e0b8-c42a-44d6-85fe-8c8ca483bf78",
+		"fd03e0b8-c42a-44d6-85fe-8c8ca483bf77",
+		"fd03e0b8-c42a-44d6-85fe-8c8ca483bf79",
+		"fd03e0b8-c42a-44d6-85fe-8c8ca483bf75",
+		
+		]
+    },
+	{
+      "rdfs:label": "Deutscher Dom",
+	  "GUID":"fd03e0b8-c42a-44d6-85fe-8c8ca483bf51",
+      "inst": "building12",
+      "product:Building": "building12",
+      "Fog:asObj": ":\\Projects\\V4Design\\Data\\PUC4sc1 Gendarmenmarkt\\Mesh\\market1\\building12.obj",
+      "rdf:type": "http://www.productontology.org/id/Building",
+      "bot:Building": "Deutscher Dom",
+      "bot:containsElement": [
+		
+		"fd03e0b8-c42a-44d6-85fe-8c8ca483bf52",
+		"fd03e0b8-c42a-44d6-85fe-8c8ca483bf53",
+		"fd03e0b8-c42a-44d6-85fe-8c8ca483bf54",
+		"fd03e0b8-c42a-44d6-85fe-8c8ca483bf55",
+		
+		]
+    }
+  ]
+}
