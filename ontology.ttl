@@ -36,4 +36,22 @@ v4d:faceCount
   rdfs:subPropertyOf v4d:Mesh ;
 
 v4d:Mesh
-  
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment "mesh geometry";
+  rdfs:label " triangular mesh.";
+  rdfs:seeAlso "obj standard";
+  fog:asOBJ "qsdf.obj";
+
+v4d:Guid
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment " the number of faces of a target mesh.";
+  rdfs:label " face count of a mesh.";
+
+v4d:faceCount
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " the number of faces of a target mesh.";
+  rdfs:label " face count of a mesh.";
+  rdfs:seeAlso "obj standard";
+  rdfs:subPropertyOf v4d:Mesh ;
