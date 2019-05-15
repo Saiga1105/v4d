@@ -27,75 +27,15 @@ dcterms:description "The V4DV Ontology for reuse of data describes meaningful re
   vann:preferredNamespaceUri "<https://w3id.org/v4d#>" ;
   owl:versionInfo "0.0.1" ;
 
-v4d:reconstruction_time
+v4d:probability_segmentation
   rdf:type owl:DatatypeProperty ;
   rdf:type owl:FunctionalProperty ;
-  rdfs:comment " the number of faces of a target mesh.";
-  rdfs:label " face count of a mesh.";
+  rdfs:comment " The maximum X,Y,Z value of a target mesh.";
+  rdfs:label " The maximum X,Y,Z value of a target mesh.";
   rdfs:seeAlso "obj standard";
   rdfs:subPropertyOf v4d:Mesh ;
-    
-v4d:faceCount
-  rdf:type owl:DatatypeProperty ;
-  rdf:type owl:FunctionalProperty ;
-  rdfs:comment " the number of faces of a target mesh.";
-  rdfs:label " face count of a mesh.";
-  rdfs:seeAlso "obj standard";
-  rdfs:subPropertyOf v4d:Mesh ;
-
-v4d:Mesh
-  rdf:type owl:DatatypeProperty ;
-  rdf:type owl:FunctionalProperty ;
-  rdfs:comment "mesh geometry";
-  rdfs:label " triangular mesh.";
-  rdfs:seeAlso "obj standard";
-  fog:asOBJ "qsdf.obj";
-
-v4d:Image
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "image file";
-  rdfs:label " image";
-  fog:asOBJ "qsdf.obj";
-
-v4d:Guid
-  rdf:type owl:DatatypeProperty ;
-  rdfs:comment "Globally Unique Identifier";
-  rdfs:label " Globally Unique Identifier";
-  rdfs:subPropertyOf v4d:Mesh , v4d:Image , bot:Wall, bot:Building, bot:Site, bot:Element ;
-
-v4d:faceCount
-  rdf:type owl:DatatypeProperty ;
-  rdf:type owl:FunctionalProperty ;
-  rdfs:comment " the number of faces of a target mesh.";
-  rdfs:label " face count of a mesh.";
-  rdfs:seeAlso "obj standard";
-  rdfs:subPropertyOf v4d:Mesh ;
-
-v4d:vertecCount
-  rdf:type owl:DatatypeProperty ;
-  rdf:type owl:FunctionalProperty ;
-  rdfs:comment " the number of vertices of a target mesh.";
-  rdfs:label " vertex count of a mesh.";
-  rdfs:seeAlso "obj standard";
-  rdfs:subPropertyOf v4d:Mesh ;
-
-v4d:centroid
-  rdf:type owl:DatatypeProperty ;
-  rdf:type owl:FunctionalProperty ;
-  rdfs:comment " the centroid of a target mesh.";
-  rdfs:label " centroid of a mesh.";
-  rdfs:seeAlso "obj standard";
-  rdfs:subPropertyOf v4d:Mesh ;
-
-v4d:Min
-  rdf:type owl:DatatypeProperty ;
-  rdf:type owl:FunctionalProperty ;
-  rdfs:comment " The minimum X,Y,Z value of a target mesh.";
-  rdfs:label " The minimum X,Y,Z value of a target mesh.";
-  rdfs:seeAlso "obj standard";
-  rdfs:subPropertyOf v4d:Mesh ;
-
-v4d:Max
+  
+v4d:segmentation_time
   rdf:type owl:DatatypeProperty ;
   rdf:type owl:FunctionalProperty ;
   rdfs:comment " The maximum X,Y,Z value of a target mesh.";
@@ -103,3 +43,74 @@ v4d:Max
   rdfs:seeAlso "obj standard";
   rdfs:subPropertyOf v4d:Mesh ;
 
+v4d:segmentid
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Globally Unique Identifier";
+  rdfs:label " Globally Unique Identifier";
+  rdfs:subPropertyOf v4d:Mesh , v4d:Image , bot:Wall, bot:Building, bot:Site, bot:Element ;
+
+v4d:segment
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " Number of segments";
+  rdfs:label " The maximum X,Y,Z value of a target mesh.";
+  rdfs:seeAlso "obj standard";
+  rdfs:subPropertyOf v4d:Mesh ;
+  
+v4d:classification_time
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " The maximum X,Y,Z value of a target mesh.";
+  rdfs:label " The maximum X,Y,Z value of a target mesh.";
+  rdfs:seeAlso "obj standard";
+  rdfs:subPropertyOf v4d:Mesh ;
+  
+v4d:classification_probability
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " The maximum X,Y,Z value of a target mesh.";
+  rdfs:label " The maximum X,Y,Z value of a target mesh.";
+  rdfs:seeAlso "obj standard";
+  rdfs:subPropertyOf v4d:Mesh ;
+
+v4d:clustering_time
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " The maximum X,Y,Z value of a target mesh.";
+  rdfs:label " The maximum X,Y,Z value of a target mesh.";
+  
+v4d:clustering_reduction
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " The maximum X,Y,Z value of a target mesh.";
+  rdfs:label " The maximum X,Y,Z value of a target mesh.";
+  
+v4d:clustering_segments
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " The maximum X,Y,Z value of a target mesh.";
+  rdfs:label " The maximum X,Y,Z value of a target mesh.";
+  
+v4d:reconstruction_time
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " The maximum X,Y,Z value of a target mesh.";
+  rdfs:label " The maximum X,Y,Z value of a target mesh.";
+  
+v4d:reconstruction_deviation
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " The maximum X,Y,Z value of a target mesh.";
+  rdfs:label " The maximum X,Y,Z value of a target mesh.";
+  
+v4d:reconstruction_LOA
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " The maximum X,Y,Z value of a target mesh.";
+  rdfs:label " The maximum X,Y,Z value of a target mesh.";
+  
+v4d:reconstruction_LOD
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " The maximum X,Y,Z value of a target mesh.";
+  rdfs:label " The maximum X,Y,Z value of a target mesh.";

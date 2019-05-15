@@ -1,4 +1,4 @@
-@prefix : <https://w3id.org/v4d#> .
+@prefix v4d: <https://w3id.org/v4d#> .
 @prefix dbp: <http://dbpedia.org/property/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -12,6 +12,9 @@
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix wd: <https://www.wikidata.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix RDFpicdublin: <http://www.w3.org/2000/PhotoRDF/dc-1-0#>.
+@prefix RDFpictechnical: <http://www.w3.org/2000/PhotoRDF/technical-1-0#>.
+@prefix RDFpiccontent: < http://www.w3.org/2000/PhotoRDF/content-1-0#>.
 
 <https://w3id.org/v4d>
   rdf:type owl:Ontology ;
@@ -55,4 +58,16 @@ v4d:probability_style
   rdfs:label " simmo creator probability";
   rdfs:subPropertyOf RDFpicdublin:type image ;
 
+v4d:mask
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " STBOL object detection output";
+  rdfs:label " STBOL output";
+  rdfs:subPropertyOf RDFpicdublin:type image ;
 
+v4d:probability_place
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " probability location of image";
+  rdfs:label " image location probability";
+  rdfs:subPropertyOf RDFpicdublin:type image ;

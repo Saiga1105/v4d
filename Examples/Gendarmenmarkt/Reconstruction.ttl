@@ -1,0 +1,104 @@
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix pto:  <http://www.productontology.org/id/>.
+@prefix Gendarmenmarkt: <http://example.org/Gendarmenmarkt#> .
+@prefix foaf : <http://xmlns.com/foaf/0.1/>.
+@prefix fog: <https://w3id.org/fog#> .
+@prefix inst: <https://example.org/data#> .
+@prefix geometry: <http://rdf.bg/geometry.ttl#> .
+@prefix omg: <https://w3id.org/omg#> .
+@prefix v4d: <https://www.v4d.org/namespace> .
+
+<http://example.org/Gendarmenmarkt> rdf:type owl:Ontology ;
+                   owl:imports <https://w3id.org/bot> ;
+                   dce:description """Example showing how the BOT ontology can be used to describe the topology of the gendarmenmarkt and its surrounding structures.
+The site has 13 buildings consisting of walls and floors. In this first example 1 site, 2 buildings with each 2 walls are represented.""" ;
+                   dc:creator <http://www.terkaj.com#V4D> ;
+                   cc:license <http://creativecommons.org/licenses/by/3.0/> ;
+                   dc:issued "2019-04-05"^^xsd:date ;
+                   dc:modified "2019-04-05"^^xsd:date .
+
+#################################################################
+#    Individualsomg &
+#################################################################
+
+Gendarmenmarkt:Gendarmenmarkt rdf:type owl:NamedIndividual , 
+                               bot:Site ;
+                      bot:hasBuilding Gendarmenmarkt:Konzerthaus ,
+                                    Gendarmenmarkt:FrenchCathedral ;
+									fog:asObj "K:\Projects\V4Design\Data\PUC4sc1_Gendarmenmarkt\Mesh\Gendarmenmarkt.obj" ;
+									foaf:name "Gendarmenmarkt";
+									rdfs:label "Gendarmenmarkt";
+									dbo:wikiPageWikiLink "https://en.wikipedia.org/wiki/Gendarmenmarkt" .
+
+Gendarmenmarkt:Konzerthaus rdf:type owl:NamedIndividual , bot:Building ;
+									bot:containsElement Gendarmenmarkt:wall1 , Gendarmenmarkt:wall2;
+									fog:asObj "K:\Projects\V4Design\Data\PUC4sc1_Gendarmenmarkt\Mesh\building1.obj" ;
+									foaf:name "Konzerthaus";
+									rdfs:label "Konzerthaus";
+									dbo:wikiPageWikiLink "https://en.wikipedia.org/wiki/Konzerthaus_Berlin" .					
+									
+Gendarmenmarkt:FrenchCathedral rdf:type owl:NamedIndividual , bot:Building ;
+									bot:containsElement Gendarmenmarkt:wall3 , Gendarmenmarkt:wall4 ;
+									fog:asObj "K:\Projects\V4Design\Data\PUC4sc1_Gendarmenmarkt\Mesh\building2.obj"	;
+									foaf:name "FrenchCathedral";
+									rdfs:label "FrenchCathedral";
+									dbo:wikiPageWikiLink "https://en.wikipedia.org/wiki/French_Cathedral,_Berlin".									
+
+
+Gendarmenmarkt:wall1 rdf:type owl:NamedIndividual ,
+                                  bot:Element , pto:Wall , omg:Geometry;
+								  rdfs:label 1;
+								  bot:adjacentElement Gendarmenmarkt:wall2;
+								  v4d:GUID "e56e60ed-bc52-4f0d-9c65-7d734fba6640";
+								  v4d:faceCount 309;
+								  v4d:vertexCount 201;
+								  v4d:centroid "7.94288611412048,-21.7423782348633,-11.3143510818481";
+								  v4d:Min "6.52180814743042,-23.2442359924316,-11.9359664916992";
+								  v4d:Max "9.36396408081055,-20.2405204772949,-10.6927356719971".
+
+Gendarmenmarkt:wall2 rdf:type owl:NamedIndividual ,
+                                  bot:Element , pto:Wall , omg:Geometry;
+								  rdfs:label 2;
+								  bot:adjacentElement Gendarmenmarkt:wall1;
+								  v4d:GUID "fb476ea2-b88a-446e-8208-16ca42af4a52";
+								  v4d:faceCount 436;
+								  v4d:vertexCount 236;
+								  v4d:centroid "-28.1641912460327,-8.08696365356445,-9.4569787979126";
+								  v4d:Min "-28.3162403106689,-8.31947422027588,-9.96411800384521";
+								  v4d:Max "-28.0121421813965,-7.85445308685303,-8.94983959197998".
+								  
+Gendarmenmarkt:wall3 rdf:type owl:NamedIndividual ,
+                                  bot:Element , pto:Wall , omg:Geometry;
+								  rdfs:label 3;
+								  bot:adjacentElement Gendarmenmarkt:wall4;
+								  v4d:GUID "3341700e-854b-479a-a4b8-3ccea59df1c2";
+								  v4d:faceCount 502;
+								  v4d:vertexCount 256;
+								  v4d:centroid "-28.3162403106689,-8.31947422027588,-9.96411800384521";
+								  v4d:Min "2.89678430557251,-4.53447437286377,-9.8223934173584";
+								  v4d:Max "4.55255651473999,-3.33521366119385,-9.29195404052734".
+
+Gendarmenmarkt:wall4 rdf:type owl:NamedIndividual ,
+                                  bot:Element , pto:Wall , omg:Geometry;
+								  rdfs:label 4;
+								  bot:adjacentElement Gendarmenmarkt:wall3;
+								  v4d:GUID "750dee2c-cd90-41d7-b398-754054671569";
+								  v4d:faceCount 306;
+								  v4d:vertexCount 187;
+								  v4d:centroid "3.72467041015625,-3.93484401702881,-9.55717372894287";
+								  v4d:Min "11.8368358612061,-10.9848985671997,-13.4567394256592";
+								  v4d:Max "13.1590671539307,-10.3896579742432,-12.4706192016602".								  
+									
+									
+
+							

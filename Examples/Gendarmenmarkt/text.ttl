@@ -1,0 +1,49 @@
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix pto:  <http://www.productontology.org/id/>.
+@prefix Gendarmenmarkt: <http://example.org/Gendarmenmarkt#> .
+@prefix foaf : <http://xmlns.com/foaf/0.1/>.
+@prefix fog: <https://w3id.org/fog#> .
+@prefix inst: <https://example.org/data#> .
+@prefix geometry: <http://rdf.bg/geometry.ttl#> .
+@prefix omg: <https://w3id.org/omg#> .
+@prefix v4d: <https://www.v4d.org/namespace> .
+
+<http://example.org/Gendarmenmarkt> rdf:type owl:Ontology ;
+                   owl:imports <https://w3id.org/bot> ;
+                   dce:description """Example showing how the BOT ontology can be used to describe the topology of the gendarmenmarkt and its surrounding structures.
+The site has 13 buildings consisting of walls and floors. In this first example 1 site, 2 buildings with each 2 walls are represented.""" ;
+                   dc:creator <http://www.terkaj.com#V4D> ;
+                   cc:license <http://creativecommons.org/licenses/by/3.0/> ;
+                   dc:issued "2019-04-05"^^xsd:date ;
+                   dc:modified "2019-04-05"^^xsd:date .
+
+#################################################################
+#    Individualsomg &
+#################################################################
+
+Gendarmenmarkt:text1 rdf:type owl:NamedIndividual ;
+            Gendarmenmarkt:FrenchCathedral ;
+			fog:astext "K:\Projects\V4Design\Data\PUC4sc1_Gendarmenmarkt\Mesh\Gendarmenmarkt.obj" ;
+			foaf:name "Gendarmenmarkt";
+			rdfs:label "Gendarmenmarkt";
+			rdfs:description "crawled text fragment";
+			v4d:content "The Schiller Monument is located in central Berlin (Berlin-Mitte) on Gendarmenmarkt, in front of the flight of steps leading up to the former royal theater, today a concert hall. It honors the poet, philosopher and historian Friedrich Schiller, who is also regarded as one of the most significant dramatists and lyricists of the German language. The set of statues was executed by Reinhold Begas a prominent 19th-century German sculptor. It is a registered historic monument.
+							Historical origin
+							Throughout Germany celebrations took place on 10 November 1859 to commemorate the 100th birthday of Friedrich Schiller (1759–1805). In Berlin funds were raised to erect a monument for the purpose, with Crown Prince Wilhelm (later Kaiser Wilhelm I) and the city of Berlin each donating 10,000 Thaler and the population 12,680 Thaler. On the day of celebration the foundation stone for the planned monument was laid, although a specific design did not yet exist. The city called for proposals, and in 1864 a decision was finally made in favor of Reinhold Begas. The monument was the first major commission of his career and thereafter led to orders for numerous monumental sculptures in Berlin and elsewhere. The Franco-Prussian war of 1870/71 delayed the unveiling, which took place on 10 November 1871, the 112th anniversary of Schiller’s birthday. The occasion was used to lay out a garden on the central part of Gendarmenmarkt, which was renamed Schillerplatz at the close of that year. This name remained until 1936.
+							The monument
+							The statue of the poet stands on a cube-shaped pedestal surrounded by four semicircular basins, above which there are water spouts in the form of lion heads. Although the memorial has the design of a fountain it was never used as such. Schiller wears a crown of laurel leaves and is depicted as a young, self-assured man. The model for the head was the Schiller bust made in 1794 by the sculptor Johann Heinrich von Dannecker, a friend of Begas. Four allegorical figures sit on the edges of the basins and depict the writer’s main areas of creative activity. At front left is Lyric Poetry with a swan-headed harp; at front right Tragedy, with the attribute of a mask. In the back are History, with names including Schiller, Lessing, Kant, Goethe and other famous people on her tablets, and Philosophy, holding a scroll with a text in Ancient Greek: ‘Know Thyself’. The pedestal bears inscriptions relating to Schiller and two small bas reliefs which show Schiller receiving a lyre from the muses and being introduced to great writers of former times.
+							During the Third Reich Gendarmenmarkt was turned into a parade ground in 1936. The decorative gardening was removed, the Schiller monument dismantled and put into storage. There is a bronze copy in the southern part of Schiller Park in the Berlin locality of Wedding. The metal used was from a memorial fountain for Emil and Walther Rathenau, originally erected in 1930 in a large public park, Volkspark Rehberge, but removed from this location by the Nazis in 1934 for ideological reasons and melted down in 1941. The marble original of the Schiller statue was placed in Lietsensee Park, which was in one of the Western sectors into which the city was divided after World War II. The monument’s heavily damaged allegorical figures were stored in Friedrichsfelde zoo in East Berlin. An East-West cultural agreement of 6 May 1986 was the precondition for reuniting all the surviving parts in East Berlin. In 1988 the partially reconstructed and partially restored monument was rebuilt at its original location on Gendarmenmarkt.
+							In autumn 2006 extensive renovation was undertaken. The entire monument was cleaned, small missing pieces were replaced and joints were filled. Rust was removed from the decorative cast iron railing and it was repainted.";
+			v4d:subject History, Summary, Gendarmenmarkt;
+			v4d:source "Allegory of History" , "Allegory of Lyric Poetry", "Allegory of Philosophy", "Allegory of Tragedy";
+			

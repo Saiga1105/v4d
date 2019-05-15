@@ -44,18 +44,17 @@ Gendarmenmarkt:33383392612_34c05c2e93_o RDFpicdublin:type owl:NamedIndividual ,
 									rdfs:label "Gendarmenmarkt";
 									dbo:wikiPageWikiLink "https://en.wikipedia.org/wiki/Gendarmenmarkt" .
 									
-<https://c2.staticflickr.com/8/7159/6619598495_33b859ac91_b.jpg>;
-								RDFpicdublin:type image;
-								RDFpicdublin:identifier 6619598495_33b859ac91_b;
-								RDFpicdublin:date 2019-04-01;
-								RDFpicdublin:coverage "Gendarmenmarkt";
-								RDFpictechnical:camera "Canon PowerShot S400";
-								RDFpicdublin:title "Gendarmenmarkt";
-								RDFpicdublin:subject Landscape, Building;
-								RDFpicdublin:publisher "";
-								RDFpicdublin:description "rooftop image of the gendarmenmarkt";
-								RDFpicdublin:format image/jpeg ;
-								v4d:mask "10023600453_6b0f572b65_o_mask.jpg" .
-
+								
+<https://c2.staticflickr.com/8/7159/6619598495_33b859ac91_b.jpg>;								
+								v4d:style "Art_Nouveau".
+								v4d:simmoID	"10023600453_6b0f572b65_o.jpg";
+								v4d:probability_creator
+								v4d:probability_style
+								v4d:mask "10023600453_6b0f572b65_o_mask.jpg";
+								v4d:date
+								v4d:title
+								v4d:subject
+								v4d:description
+								
 								
 								
