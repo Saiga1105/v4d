@@ -1,0 +1,96 @@
+@prefix : <https://w3id.org/v4d#> .
+@prefix dbp: <http://dbpedia.org/property/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fog: <https://w3id.org/fog#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix omg: <https://w3id.org/omg#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix wd: <https://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/v4d>
+  rdf:type owl:Ontology ;
+  dcterms:creator [
+      rdf:type foaf:Person ;
+      foaf:name "Maarten Bassier" ;
+    ] ;
+
+dcterms:description "The V4DV Ontology for reuse of data describes meaningful relations towards publishing Linked Open Data from existing resources." ;
+  dcterms:issued "2019-05-03"^^xsd:date ;
+  dcterms:title "V4D: Reuse of Data" ;
+  vann:preferredNamespacePrefix "v4d" ;
+  vann:preferredNamespaceUri "<https://w3id.org/v4d#>" ;
+  owl:versionInfo "0.0.1" ;
+
+v4d:faceCount
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " the number of faces of a target mesh.";
+  rdfs:label " face count of a mesh.";
+  rdfs:seeAlso "obj standard";
+  rdfs:subPropertyOf v4d:Mesh ;
+
+v4d:Mesh
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment "mesh geometry";
+  rdfs:label " triangular mesh.";
+  rdfs:seeAlso "obj standard";
+  fog:asOBJ "qsdf.obj";
+
+v4d:Image
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "image file";
+  rdfs:label " image";
+  fog:asOBJ "qsdf.obj";
+
+v4d:Guid
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "Globally Unique Identifier";
+  rdfs:label " Globally Unique Identifier";
+  rdfs:subPropertyOf v4d:Mesh , v4d:Image , bot:Wall, bot:Building, bot:Site, bot:Element ;
+
+v4d:faceCount
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " the number of faces of a target mesh.";
+  rdfs:label " face count of a mesh.";
+  rdfs:seeAlso "obj standard";
+  rdfs:subPropertyOf v4d:Mesh ;
+
+v4d:vertecCount
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " the number of vertices of a target mesh.";
+  rdfs:label " vertex count of a mesh.";
+  rdfs:seeAlso "obj standard";
+  rdfs:subPropertyOf v4d:Mesh ;
+
+v4d:centroid
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " the centroid of a target mesh.";
+  rdfs:label " centroid of a mesh.";
+  rdfs:seeAlso "obj standard";
+  rdfs:subPropertyOf v4d:Mesh ;
+
+v4d:Min
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " The minimum X,Y,Z value of a target mesh.";
+  rdfs:label " The minimum X,Y,Z value of a target mesh.";
+  rdfs:seeAlso "obj standard";
+  rdfs:subPropertyOf v4d:Mesh ;
+
+v4d:Max
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " The maximum X,Y,Z value of a target mesh.";
+  rdfs:label " The maximum X,Y,Z value of a target mesh.";
+  rdfs:seeAlso "obj standard";
+  rdfs:subPropertyOf v4d:Mesh ;

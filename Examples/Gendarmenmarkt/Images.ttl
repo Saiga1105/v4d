@@ -1,0 +1,60 @@
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix pto:  <http://www.productontology.org/id/>.
+@prefix Gendarmenmarkt: <http://example.org/Gendarmenmarkt#> .
+@prefix foaf : <http://xmlns.com/foaf/0.1/>.
+@prefix fog: <https://w3id.org/fog#> .
+@prefix inst: <https://example.org/data#> .
+@prefix geometry: <http://rdf.bg/geometry.ttl#> .
+@prefix omg: <https://w3id.org/omg#> .
+@prefix v4d: <https://www.v4d.org/namespace> .
+@prefix RDFpicdublin: <http://www.w3.org/2000/PhotoRDF/dc-1-0#>.
+@prefix RDFpictechnical: <http://www.w3.org/2000/PhotoRDF/technical-1-0#>.
+@prefix RDFpiccontent: < http://www.w3.org/2000/PhotoRDF/content-1-0#>.
+
+
+<http://example.org/Gendarmenmarkt> rdf:type owl:Ontology ;
+                   owl:imports <https://w3id.org/bot> ;
+                   dce:description """Example showing how the BOT ontology can be used to describe the topology of the gendarmenmarkt and its surrounding structures.
+The site has 13 buildings consisting of walls and floors. In this first example 1 site, 2 buildings with each 2 walls are represented.""" ;
+                   dc:creator <https://v4design.eu/> ;
+                   cc:license <http://creativecommons.org/licenses/by/3.0/> ;
+                   dc:issued "2019-05-05"^^xsd:date ;
+                   dc:modified "2019-05-05"^^xsd:date .
+
+#################################################################
+#    Individualsomg &
+#################################################################
+
+Gendarmenmarkt:33383392612_34c05c2e93_o RDFpicdublin:type owl:NamedIndividual , 
+                               bot:Site ;
+                      bot:hasBuilding Gendarmenmarkt:Konzerthaus ,
+                                    Gendarmenmarkt:FrenchCathedral ;
+									fog:asObj "K:\Projects\V4Design\Data\PUC4sc1_Gendarmenmarkt\Mesh\Gendarmenmarkt.obj" ;
+									foaf:name "Gendarmenmarkt";
+									rdfs:label "Gendarmenmarkt";
+									dbo:wikiPageWikiLink "https://en.wikipedia.org/wiki/Gendarmenmarkt" .
+									
+<https://c2.staticflickr.com/8/7159/6619598495_33b859ac91_b.jpg>;
+								RDFpicdublin:type image;
+								RDFpicdublin:identifier 6619598495_33b859ac91_b;
+								RDFpicdublin:date 2019-04-01;
+								RDFpicdublin:coverage "Gendarmenmarkt";
+								RDFpictechnical:camera "";
+								RDFpicdublin:title "Gendarmenmarkt";
+								RDFpicdublin:subject Landscape, Building;
+								RDFpicdublin:publisher "";
+								RDFpicdublin:description "rooftop image of the gendarmenmarkt";
+								RDFpicdublin:format image/jpeg ;
+								v4d:style "Art_Nouveau".
+								
+								

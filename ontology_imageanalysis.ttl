@@ -1,0 +1,58 @@
+@prefix : <https://w3id.org/v4d#> .
+@prefix dbp: <http://dbpedia.org/property/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix fog: <https://w3id.org/fog#> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix omg: <https://w3id.org/omg#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix wd: <https://www.wikidata.org/entity/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/v4d>
+  rdf:type owl:Ontology ;
+  dcterms:creator [
+      rdf:type foaf:Person ;
+      foaf:name "Maarten Bassier" ;
+    ] ;
+
+dcterms:description "The V4DV Ontology for reuse of data describes meaningful relations towards publishing Linked Open Data from existing resources." ;
+  dcterms:issued "2019-05-03"^^xsd:date ;
+  dcterms:title "V4D: Reuse of Data" ;
+  vann:preferredNamespacePrefix "v4d" ;
+  vann:preferredNamespaceUri "<https://w3id.org/v4d#>" ;
+  owl:versionInfo "0.0.1" ;
+
+v4d:style
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " the painting style of the artwork";
+  rdfs:label " artwork style";
+  rdfs:subPropertyOf RDFpicdublin:type image ;
+  
+v4d:simmoID	
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " image crawling id";
+  rdfs:label " simmo crawling unit url";
+  rdfs:subPropertyOf RDFpicdublin:type image ;
+
+v4d:probability_creator
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " AE&TP probability of the creator of the work";
+  rdfs:label " simmo creator probability";
+  rdfs:subPropertyOf RDFpicdublin:type image ;
+
+v4d:probability_style
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment " AE&TP probability of the creator of the work";
+  rdfs:label " simmo creator probability";
+  rdfs:subPropertyOf RDFpicdublin:type image ;
+
+
